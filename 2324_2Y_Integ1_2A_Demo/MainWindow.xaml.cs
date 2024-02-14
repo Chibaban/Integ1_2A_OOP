@@ -49,6 +49,10 @@ namespace _2324_2Y_Integ1_2A_Demo
             btnMult.Content = "x";
             btnDiv.Content = "/";
             btnEnter.Content = "=";
+            btnClear.Content = "C";
+            btnBack.Content = "<-";
+            //btnSqrRoot.Content = "√";
+            btnSqrd.Content = "^2";
         }
 
         private void numberEnter(int x)
@@ -133,24 +137,28 @@ namespace _2324_2Y_Integ1_2A_Demo
         {
             ope = 0;
             tbCalc.Text = "";
+            tbCalcOpe.Text = "+";
         }
 
         private void btnMin_Click(object sender, RoutedEventArgs e)
         {
             ope = 1;
             tbCalc.Text = "";
+            tbCalcOpe.Text = "-";
         }
 
         private void btnMult_Click(object sender, RoutedEventArgs e)
         {
             ope = 2;
             tbCalc.Text = "";
+            tbCalcOpe.Text = "x";
         }
 
         private void btnDiv_Click(object sender, RoutedEventArgs e)
         {
             ope = 3;
             tbCalc.Text = "";
+            tbCalcOpe.Text = "/";
         } 
         #endregion
 
@@ -178,6 +186,35 @@ namespace _2324_2Y_Integ1_2A_Demo
                 ope = -1;
                 num2 = 0;
             }
+        }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            tbCalc.Text = "";
+            tbCalcOpe.Text = "C";
+        }
+
+        private void tbCalcOpe_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            tbCalc.Text = tbCalc.Text.Substring(0, tbCalc.Text.Length - 1);
+            tbCalcOpe.Text = "<-";
+        }
+
+        private void btnSqrRoot_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void btnSqrd_Click(object sender, RoutedEventArgs e)
+        {
+            num1 *= num1;
+            tbCalc.Text = num1.ToString();
+            tbCalcOpe.Text = "^2";
         }
     }
 }

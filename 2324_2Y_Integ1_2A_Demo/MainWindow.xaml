@@ -39,6 +39,14 @@
             Width="50" Height="50" FontSize="28" FontWeight="Bold" Click="btnEnter_Click"/>
         <TextBox x:Name="tbCalc" HorizontalAlignment="Left" Margin="28,22,0,0" TextWrapping="Wrap" Text="" 
                  VerticalAlignment="Top" Width="215" FontSize="28" IsEnabled="False" HorizontalContentAlignment="Right"/>
+        <Button x:Name="btnClear" Content="X" HorizontalAlignment="Left" Margin="28,243,0,0" VerticalAlignment="Top" 
+            Width="50" Height="50" FontSize="28" FontWeight="Bold" Click="btnClear_Click"/>
+        <TextBox x:Name="tbCalcOpe" HorizontalAlignment="Left" Margin="248,22,0,0" TextWrapping="Wrap" Text="" 
+            VerticalAlignment="Top" Width="50" FontSize="28" IsEnabled="False" HorizontalContentAlignment="Right" TextChanged="tbCalcOpe_TextChanged"/>
+        <Button x:Name="btnBack" Content="X" HorizontalAlignment="Left" Margin="248,78,0,0" VerticalAlignment="Top" 
+            Width="50" Height="50" FontSize="28" FontWeight="Bold" Click="btnBack_Click"/>
+        <Button x:Name="btnSqrd" Content="X" HorizontalAlignment="Left" Margin="248,133,0,0" VerticalAlignment="Top" 
+            Width="50" Height="50" FontSize="28" FontWeight="Bold" Click="btnSqrd_Click"/>
 
 
     </Grid>
